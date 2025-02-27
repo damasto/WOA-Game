@@ -63,8 +63,14 @@ body {
 }
 
 #stats-in-game {
+    display: flex;
     flex-direction: row;
-    justify-content: space;
+    justify-content: space-around;
+    align-items: center;
+    width: 1000px;
+    height: 50px;
+    background-color: wheat;
+    margin-top: 50px;
 }
 
 #game-screen {
