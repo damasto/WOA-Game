@@ -44,16 +44,31 @@ body {
 }
 
 
-
 #game-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#stats-container {
     border: 1px solid black;
     border-radius: 30%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 400px;
     margin: auto;
     background-color: wheat;
+}
+
+#stats-in-game {
+    flex-direction: row;
+    justify-content: space;
+}
+
+#game-screen {
+    background-color: white;
 }
 
 #game-end {
