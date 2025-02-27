@@ -28,8 +28,8 @@ class Game {
         
 
         this.gameIntervalId = setInterval(() => {
-            this.gameLoopFrequency();
-        }, 1000);
+            this.gameLoop();
+        }, this.gameLoopFrequency);
     };
 
     gameLoop () {
