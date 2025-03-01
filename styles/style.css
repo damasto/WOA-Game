@@ -74,7 +74,9 @@ body {
 }
 
 #game-screen {
-    background-color: white;
+    background-image: url("../images/background1.jpg");
+    background-position: center;
+    background-position-y: 100%;
 }
 
 #game-end {
