@@ -52,4 +52,4 @@ class Character {
     didCollide(obstacle) {
         
     }
-}dth
+}

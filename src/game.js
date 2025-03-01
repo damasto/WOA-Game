@@ -5,7 +5,7 @@ class Game {
         this.gameEndScreen = document.getElementById("game-end");
         this.gameContainer = document.getElementById("game-container");
         this.statsContainer = document.getElementById("stats-container")
-        this.character = new Character(this.gameScreen, 200, 500, 100, 150, "../images/character.png")
+        this.character = new Character(this.gameScreen, 200, 500, 100, 150, "./character.png")
         this.height = 600;
         this.width = 1000;
         this.missiles = [];
