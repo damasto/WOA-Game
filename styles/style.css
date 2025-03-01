@@ -74,10 +74,12 @@ body {
 }
 
 #game-screen {
+    display: none;
     background-image: url("../images/background1.jpg");
     background-position: center;
     background-position-y: 100%;
 }
+
 
 #game-end {
     display: none;

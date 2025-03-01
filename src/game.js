@@ -5,7 +5,7 @@ class Game {
         this.gameEndScreen = document.getElementById("game-end");
         this.gameContainer = document.getElementById("game-container");
         this.statsContainer = document.getElementById("stats-container")
-        this.player = null;
+        this.character = new Character(this.gameScreen, 200, 500, 100, 150, "../images/character.png")
         this.height = 600;
         this.width = 1000;
         this.missiles = [];
@@ -33,6 +33,7 @@ class Game {
     };
 
     gameLoop () {
+        //console.log("in the gameLoop")
         this.update();
 
         if (this.gameIsOver) {
@@ -41,7 +42,8 @@ class Game {
     }
 
     update () {
-
+        //console.log("in the update")
+        this.character.move();
     }
 
     changeStatsDisplay () {
