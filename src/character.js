@@ -10,6 +10,7 @@ class Character {
         this.element = document.createElement("img");
 
         this.element.setAttribute("src", imgPath);
+        this.element.classList.add("character")
         this.element.style.position = "absolute";
         this.element.style.width = `${width}px`;
         this.element.style.height = `${height}px`;
@@ -22,24 +23,25 @@ class Character {
     }
 
     move () {
+
+        if (this.left <= 0) {
+            this.left = 0;
+        };
+
+        if (this.top <= 0) {
+            this.top = 0;
+        };
+
+        if (this.left > this.gameScreen.offsetWidth - this.width) {
+            this.left = this.gameScreen.offsetWidth - this.width;
+        };
+
+        if (this.top > this.gameScreen.offsetHeight - this.height) {
+          this.top = this.gameScreen.offsetHeight - this.height;
+        }
+
         this.left += this.directionX;
         this.top += this.directionY;
-
-        if (this.left < 10) {
-            this.left = 10;
-        };
-
-        if (this.top < 10) {
-            this.top = 10;
-        };
-
-        if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
-            this.left = this.gameScreen.offsetWidth - this.width -  10;
-        };
-
-        if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
-          this.top = this.gameScreen.offsetHeight - this.height - 10;
-        }
 
         this.updatePosition()
     }

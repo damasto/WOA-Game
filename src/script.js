@@ -18,15 +18,23 @@ window.onload = function () {
       switch (key) {
         case "ArrowLeft":
           game.character.directionX = -1;
+          console.log("GOW", game.gameScreen.offsetWidth);
+          console.log("left", game.character.left)
           break;
         case "ArrowUp":
           game.character.directionY = -1;
+          console.log("GOW", game.gameScreen.offsetHeight);
+          console.log("top", game.character.top);
           break;
         case "ArrowRight":
           game.character.directionX = 1;
+          console.log("GOW", game.gameScreen.offsetWidth);
+          console.log("left", game.character.left);
           break;
         case "ArrowDown":
           game.character.directionY = 1;
+          console.log("GOW", game.gameScreen.offsetHeight);
+          console.log("top", game.character.top);
           break;
       }
     }
