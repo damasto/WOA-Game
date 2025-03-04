@@ -51,7 +51,19 @@ class Character {
         this.element.style.top = `${this.top}px`;
     }
 
-    didCollide(obstacle) {
-        
+    didCollide(missile) {
+        const characterRect = this.element.getBoundingClientRect();
+        const missileRect = this.element.getBoundingClientRect();
+
+        if (
+            characterRect.left < missileRect.right && 
+            characterRect.right > missileRect.left && 
+            characterRect.top < missileRect.bottom && 
+            characterRect.bottom > missileRect.top
+        ) {
+            return true
+        } else {
+            return;
+        }
     }
 }

@@ -44,6 +44,23 @@ class Game {
     update () {
         //console.log("in the update")
         this.character.move();
+
+       // const randomNr = Math.random()
+       // console.log(randomNr)
+
+       for (let i = 0; i < this.missiles.length; i++) {
+        const missile = this.missiles[i];
+        missile.move();
+       }
+
+       if(this.character.didCollide(missile)) {
+        this.missile.element.remove()
+       }
+
+        if (Math.random() > 0.2 && this.missiles.length === 0) {
+           this.missiles.push(new Missile (this.gameScreen, "../images/tomatito.png"))
+        }
+
     }
 
     changeStatsDisplay () {
