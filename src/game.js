@@ -95,6 +95,7 @@ class Game {
         if (Math.random() > 0.98 && this.missiles.length < 10) {
 
            this.missiles.push(new Missile(this.gameScreen, 100, 50, randomOption));
+           console.log(missile.imgPath)
         }
 
       
