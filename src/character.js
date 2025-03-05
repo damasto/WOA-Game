@@ -1,25 +1,9 @@
-class Character {
+class Character extends Component {
     constructor(gameScreen, left, top, width, height, imgPath) {
-        this.gameScreen = gameScreen;
-        this.left = left;
-        this.top = top;
-        this.width = width;
-        this.height = height;
+        super(gameScreen, left, top, width, height, imgPath);
         this.directionX = 0;
         this.directionY = 0;
-        this.element = document.createElement("img");
-
-        this.element.setAttribute("src", imgPath);
-        this.element.classList.add("character")
-        this.element.style.position = "absolute";
-        this.element.style.width = `${width}px`;
-        this.element.style.height = `${height}px`;
-        this.element.style.left = `${left}px`;
-        this.element.style.top = `${top}px`;
-        this.gameScreen.appendChild(this.element)
-
-
-        
+        this.element.classList.add("character");
     }
 
     move () {
@@ -52,4 +36,18 @@ class Character {
     }
 
     didCollide(missile) {
-        const cha
+        const characterRect = this.element.getBoundingClientRect();
+        const missileRect = missile.element.getBoundingClientRect();
+
+        if (
+            characterRect.left < missileRect.right && 
+            characterRect.right > missileRect.left && 
+            characterRect.top < missileRect.bottom && 
+            characterRect.bottom > missileRect.top
+        ) {
+            return true
+        } else {
+            return;
+        }
+    }
+}

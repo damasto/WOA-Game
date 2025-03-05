@@ -90,4 +90,15 @@ body {
     background-color: black;
     color: red;
     flex-direction: column;
-    justify-content
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+@keyframes grow-font {
+    40% {
+        font-size: 20px
+    }
+}
