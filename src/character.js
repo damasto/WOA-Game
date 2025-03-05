@@ -59,8 +59,7 @@ class Character {
             characterRect.left < missileRect.right && 
             characterRect.right > missileRect.left && 
             characterRect.top < missileRect.bottom && 
-            characterRect.bottom > missileRect.top ||
-            missileRect.bottom < this.gameScreen.height
+            characterRect.bottom > missileRect.top
         ) {
             return true
         } else {

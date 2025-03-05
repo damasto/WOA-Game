@@ -19,9 +19,6 @@ class Missile {
     move() {
         this.top += 4;
         this.updatePosition();
-        
-        console.log(this.left)
-
     };
 
     updatePosition() {

@@ -1,11 +1,16 @@
 window.onload = function () {
   const startButton = document.getElementById("start-button");
+  const restartButton = document.getElementById("restart-button");
 
   const game = new Game();
   const possibleKeys = ["ArrowLeft", "ArrowUp", "ArrowRight", "ArrowDown"];
 
   startButton.addEventListener("click", () => {
     game.start();
+  });
+
+  restartButton.addEventListener("click", () => {
+    window.location.reload();
   });
 
   function handleKeyDown(event) {
@@ -17,22 +22,24 @@ window.onload = function () {
 
       switch (key) {
         case "ArrowLeft":
-          game.character.directionX = -5;
+          game.character.directionX = -3;
+          game.character.element.style.transform = "scaleX(-1)"
           console.log("GOW", game.gameScreen.offsetWidth);
           console.log("left", game.character.left)
           break;
         case "ArrowUp":
-          game.character.directionY = -1;
+          game.character.directionY = -3;
           console.log("GOW", game.gameScreen.offsetHeight);
           console.log("top", game.character.top);
           break;
         case "ArrowRight":
-          game.character.directionX = 1;
+          game.character.directionX = 3;
+          game.character.element.style.transform = "scaleX(1)";
           console.log("GOW", game.gameScreen.offsetWidth);
           console.log("left", game.character.left);
           break;
         case "ArrowDown":
-          game.character.directionY = 1;
+          game.character.directionY = 3;
           console.log("GOW", game.gameScreen.offsetHeight);
           console.log("top", game.character.top);
           break;

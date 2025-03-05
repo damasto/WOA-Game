@@ -30,6 +30,7 @@ body {
     width: 800px;
     height: 500px;
     margin: 50px auto
+
 }
 
 #start-button {
@@ -41,6 +42,7 @@ body {
     background: linear-gradient(#FF003F, #8B0000);   
     transition: all 0.3s ease-in-out;
     animation: grow-font 5s infinite;
+
 }
 
 
@@ -48,6 +50,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 #stats-container {
@@ -79,12 +82,19 @@ body {
     background-image: url("../images/background1.jpg");
     background-position: center;
     background-position-y: 100%;
-    border: 1px solid black
 }
 
 
 #game-end {
-    display: none;
+    display: none; 
+    background-color: black;
+    color: red;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
 }
 
 @keyframes grow-font {
