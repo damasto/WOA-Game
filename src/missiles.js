@@ -1,7 +1,7 @@
 class Missile {
     constructor (gameScreen, imgPath) {
         this.gameScreen = gameScreen;
-        this.left = Math.floor(Math.random(0) * this.gameScreen.width);
+        this.left = Math.floor(Math.random() * 900);
         this.top = 0;
         this.width = 100;
         this.height = 50;
@@ -17,8 +17,11 @@ class Missile {
     }
 
     move() {
-        this.top += 15;
+        this.top += 4;
         this.updatePosition();
+        
+        console.log(this.left)
+
     };
 
     updatePosition() {

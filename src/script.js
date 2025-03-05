@@ -17,7 +17,7 @@ window.onload = function () {
 
       switch (key) {
         case "ArrowLeft":
-          game.character.directionX = -1;
+          game.character.directionX = -5;
           console.log("GOW", game.gameScreen.offsetWidth);
           console.log("left", game.character.left)
           break;

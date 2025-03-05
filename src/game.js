@@ -48,17 +48,27 @@ class Game {
        // const randomNr = Math.random()
        // console.log(randomNr)
 
-       for (let i = 0; i < this.missiles.length; i++) {
+      for (let i = 0; i < this.missiles.length; i++) {
         const missile = this.missiles[i];
         missile.move();
+
+
+        if (this.character.didCollide(missile)) {
+          missile.element.remove();
+          this.missiles.splice(i, 1);
+          i--
+        } else if (missile.top >= this.height) {
+            missile.element.remove();
+            this.score += 5;
+            this.missiles.splice(i, 1);
+            i--;
+        }
+
        }
 
-       if(this.character.didCollide(missile)) {
-        this.missile.element.remove()
-       }
 
-        if (Math.random() > 0.2 && this.missiles.length === 0) {
-           this.missiles.push(new Missile (this.gameScreen, "../images/tomatito.png"))
+        if (Math.random() > 0.99) {
+           this.missiles.push(this.createMissile())
         }
 
     }
@@ -66,6 +76,17 @@ class Game {
     changeStatsDisplay () {
         this.statsContainer.removeAttribute("id", "stats-container")
         this.statsContainer.setAttribute("id", "stats-in-game")
+    }
+
+    createMissile() {
+
+        const tomato = new Missile(this.gameScreen, "../images/tomatito.png");
+        const lettuce = new Missile(this.gameScreen, "../images/lechuga.png");
+        const poop = new Missile(this.gameScreen, "../images/poop.png");
+
+        const missileOptions = [tomato, lettuce, poop];
+
+        return missileOptions[Math.floor(Math.random() * missileOptions.length)];
     }
 
 }
