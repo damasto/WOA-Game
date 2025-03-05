@@ -45,4 +45,100 @@ class Game {
         this.update();
 
         if (this.gameIsOver) {
-            clea
+            clearInterval(this.gameIntervalId)
+        }
+    }
+
+    update () {
+        //console.log("in the update")
+        this.character.move();
+
+       // const randomNr = Math.random()
+       // console.log(randomNr)
+
+      for (let i = 0; i < this.missiles.length; i++) {
+        const missile = this.missiles[i];
+        missile.move();
+
+
+
+        if (this.character.didCollide(missile)) {
+          missile.element.remove();
+          this.lives --;
+          this.livesSpan.innerHTML = this.lives
+          this.missiles.splice(i, 1);
+          i--
+        } else if (missile.top >= this.height) {
+            missile.element.remove();
+            this.score += 5;
+            this.scoreSpan.innerHTML = this.score
+            this.missiles.splice(i, 1);
+            i--;
+        }
+
+        if (this.lives === 0) {
+            this.endGame();
+        };
+
+       }
+
+       const missileOptions = [
+            "./images/tomatito.png",
+            "./images/lechuga.png",
+            "./images/poop.png"
+            ];
+
+        const randomOption = missileOptions[Math.floor(Math.random() * 3)]
+
+        
+
+        if (Math.random() > 0.98 && this.missiles.length < 10) {
+
+           this.missiles.push(new Missile(this.gameScreen, 100, 50, randomOption));
+        }
+
+      
+    }
+
+    changeStatsDisplay () {
+        this.statsContainer.removeAttribute("id", "stats-container")
+        this.statsContainer.setAttribute("id", "stats-in-game")
+    }
+
+    endGame () {
+
+        this.character.element.remove();
+        this.missiles.forEach((missile) => missile.element.remove());
+        this.gameIsOver = true;
+
+        this.gameScreen.style.display = "none";
+        this.gameEndScreen.style.display = "flex";
+        this.gameEndScreen.style.width = `${this.width}px`;
+        this.gameEndScreen.style.height = `${this.height}px`;
+
+        this.scoreSpan.innerHTML = this.score;
+
+        this.music.pause();
+        this.music.currentTime = 0;
+    }
+
+    playMusic() {
+        this.music.addEventListener("ended", function () {
+            return true
+        })
+    }
+
+
+    /*createMissile() {
+
+        const missileOptions = [
+            "../images/tomatito.png"),
+            "../images/lechuga.png"),
+            "../images/poop.png")
+            ];
+
+        
+        return missileOptions[Math.floor(Math.random() * 2)];
+    }*/
+
+}
