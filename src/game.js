@@ -17,7 +17,7 @@ class Game {
         this.gameIntervalId;
         this.gameLoopFrequency = Math.round(1000/60);
         this.music = new Audio();
-        this.music.setAttribute("src", "../audio/gameAudio.mp3" );
+        this.music.setAttribute("src", "./audio/gameAudio.mp3" );
         this.music.volume = 0.4;
         this.music.loop = true
     }
@@ -83,9 +83,9 @@ class Game {
        }
 
        const missileOptions = [
-            "../images/tomatito.png",
-            "../images/lechuga.png",
-            "../images/poop.png"
+            "./images/tomatito.png",
+            "./images/lechuga.png",
+            "./images/poop.png"
             ];
 
         const randomOption = missileOptions[Math.floor(Math.random() * 3)]
