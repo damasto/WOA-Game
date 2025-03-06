@@ -83,10 +83,22 @@ class Game {
        }
 
        const missileOptions = [
-            "./images/tomatito.png",
-            "./images/lechuga.png",
-            "./images/poop.png"
-            ];
+         {
+           weight: 2,
+           imgPath: "../images/lechuga.png",
+         },
+         {
+           weight: 3,
+           imgPath: "../images/tomatito.png",
+         },
+         {
+           weight: 5,
+           imgPath: "../images/poop.png",
+         },
+         "./images/tomatito.png",
+         "./images/lechuga.png",
+         "./images/poop.png",
+       ];
 
         const randomOption = missileOptions[Math.floor(Math.random() * 3)]
 
@@ -94,8 +106,7 @@ class Game {
 
         if (Math.random() > 0.98 && this.missiles.length < 10) {
 
-           this.missiles.push(new Missile(this.gameScreen, 100, 50, randomOption));
-           console.log(missile.imgPath)
+           this.missiles.push(new Missile(this.gameScreen, randomOption.weight, randomOption.imgPath));
         }
 
       
