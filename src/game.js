@@ -95,9 +95,9 @@ class Game {
            weight: 5,
            imgPath: "../images/poop.png",
          },
-         "./images/tomatito.png",
-         "./images/lechuga.png",
-         "./images/poop.png",
+         "../images/tomatito.png",
+         "../images/lechuga.png",
+         "../images/poop.png",
        ];
 
         const randomOption = missileOptions[Math.floor(Math.random() * 3)]
