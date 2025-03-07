@@ -114,7 +114,7 @@ class Game {
       },
     ];
 
-    const randomOption = missileOptions[Math.floor(Math.random() * 2)];
+    const randomOption = missileOptions[Math.floor(Math.random() * 3)];
 
     if (Math.random() > 0.98 && this.missiles.length < 10) {
       this.missiles.push(
