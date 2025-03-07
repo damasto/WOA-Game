@@ -102,15 +102,15 @@ class Game {
     const missileOptions = [
       {
         weight: 1,
-        imgPath: "/images/lechuga.png",
+        imgPath: "images/lechuga.png",
       },
       {
         weight: 2,
-        imgPath: "/images/tomatito.png",
+        imgPath: "images/tomatito.png",
       },
       {
         weight: 3,
-        imgPath: "/images/poop.png",
+        imgPath: "images/poop.png",
       },
     ];
 
