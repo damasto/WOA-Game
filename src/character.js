@@ -21,9 +21,9 @@ class Character extends Component {
         if (this.left <= 0) {
             this.left = 0;
         };
-
-        if (this.top <= 0) {
-            this.top = 0;
+        //prevents character to walk up to the entire top
+        if (this.top <= 250) {
+            this.top = 250;
         };
 
         if (this.left > this.gameScreen.offsetWidth - this.width) {
@@ -38,11 +38,6 @@ class Character extends Component {
         this.top += this.directionY;
 
         this.updatePosition()
-    }
-
-    updatePosition() {
-        this.element.style.left = `${this.left}px`
-        this.element.style.top = `${this.top}px`;
     }
 
     didCollide(missile) {
