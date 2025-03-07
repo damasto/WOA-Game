@@ -7,7 +7,7 @@ class Wildfire extends Component {
         this.left = Math.floor(Math.random() * 800);
         this.top = Math.floor(Math.random() * (550- 160 + 1) + 160);
         this.element = document.createElement("img");
-        this.element.setAttribute("src", "../images/wildfire.png");
+        this.element.setAttribute("src", "/images/wildfire.png");
         this.element.style.position = "absolute";
         this.element.style.width = `${this.width}px`;
         this.element.style.height = `${this.height}px`;

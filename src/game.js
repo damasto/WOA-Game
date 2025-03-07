@@ -13,7 +13,7 @@ class Game {
       500,
       100,
       150,
-      "../images/character.png"
+      "./images/character.png"
     );
     this.height = 600;
     this.width = 1000;
@@ -102,15 +102,15 @@ class Game {
     const missileOptions = [
       {
         weight: 1,
-        imgPath: "../images/lechuga.png",
+        imgPath: "/images/lechuga.png",
       },
       {
         weight: 2,
-        imgPath: "../images/tomatito.png",
+        imgPath: "/images/tomatito.png",
       },
       {
         weight: 3,
-        imgPath: "../images/poop.png",
+        imgPath: "/images/poop.png",
       },
     ];
 

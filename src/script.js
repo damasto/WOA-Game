@@ -62,4 +62,16 @@ window.onload = function () {
         case "ArrowUp":
           game.character.directionY = 0;
           break;
-        cas
+        case "ArrowRight":
+          game.character.directionX = 0;
+          break;
+        case "ArrowDown":
+          game.character.directionY = 0;
+          break;
+      }
+    }
+  }
+
+  window.addEventListener("keydown", handleKeyDown);
+  window.addEventListener("keyup", handleKeyUp);
+};
