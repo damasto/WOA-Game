@@ -123,7 +123,7 @@ class Game {
     }
 
 
-    if (/*Math.floor(Math.random() * 900) > 898*/ Math.random() > 0.9 && this.boni.length === 0) {
+    /*if (/*Math.floor(Math.random() * 900) > 898 Math.random() > 0.9 && this.boni.length === 0) {
         this.boni.push(
           new Wildfire(this.gameScreen)
         );
@@ -134,7 +134,7 @@ class Game {
     for (let i = 0; i < this.boni.length; i++) {
         const bonus = this.boni[i];
         bonus.placeBonus();
-    }
+    }*/
   
 
 
