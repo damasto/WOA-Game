@@ -90,4 +90,30 @@ body {
     background-color: black;
     color: red;
     flex-direction: column;
-    justify-content
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.rotate {
+    animation: rotation 1s infinite linear;
+}
+
+@keyframes grow-font {
+    40% {
+        font-size: 20px
+    }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+

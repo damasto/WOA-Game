@@ -6,5 +6,5 @@ class Component {
         this.width = width;
         this.height = height;
         this.imgPath = imgPath;
-
-        
+    };
+}

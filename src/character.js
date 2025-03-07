@@ -3,7 +3,17 @@ class Character extends Component {
         super(gameScreen, left, top, width, height, imgPath);
         this.directionX = 0;
         this.directionY = 0;
+        
+
+        this.element = document.createElement("img");
+        this.element.setAttribute("src", this.imgPath);
         this.element.classList.add("character");
+        this.element.style.position = "absolute";
+        this.element.style.width = `${width}px`;
+        this.element.style.height = `${height}px`;
+        this.element.style.left = `${left}px`;
+        this.element.style.top = `${top}px`;
+        this.gameScreen.appendChild(this.element);
     }
 
     move () {
