@@ -53,6 +53,7 @@ class Game {
     this.gameIntervalId = setInterval(() => {
       this.gameLoop();
     }, this.gameLoopFrequency);
+
     //makes a wildfire appear every 10 seconds
     this.wildfireIntervalId = setInterval(() => {
       this.wildfire = new Wildfire(
