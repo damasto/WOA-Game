@@ -27,6 +27,7 @@
         <div id="stats-container">
           <h2>Stats</h2>
           <p>Score: <span id="score">0</span></p>
+          <p>Wildfires: <span id="catched">0 / 5</span></p>
           <p>Lives: <span id="lives">3</span></p>
         </div>
         <!-- #game-screen is initially hidden using CSS style display: none -->
@@ -36,8 +37,8 @@
       <!-- #game-end is initially hidden using CSS style display: none -->
       <div id="game-end">
         <!--<img src="./images/logo.png" alt="" class="logo-img" /> -->
-        <h1>Game Over</h1>
-        <h2>Such a shame...</h2>
+        <h1 id="game-result">Game Over</h1>
+        <h2 id="end-phrase">Such a shame...</h2>
         <br />
         <button id="restart-button">Try Again</button>
       </div>

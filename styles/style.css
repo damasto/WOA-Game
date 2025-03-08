@@ -87,7 +87,46 @@ body {
 
 #game-end {
     display: none; 
-    background-color: black;
+    background-image: url("../images/sept.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+
     color: red;
     flex-direction: column;
-    justify-content
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#game-end h1{
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0
+}
+
+#game-end h2 {
+    font-size: 2em;
+}
+
+.rotate {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes grow-font {
+    40% {
+        font-size: 20px
+    }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+

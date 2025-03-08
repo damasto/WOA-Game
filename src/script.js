@@ -1,9 +1,12 @@
 window.onload = function () {
   const startButton = document.getElementById("start-button");
   const restartButton = document.getElementById("restart-button");
+  
 
   const game = new Game();
-  const possibleKeys = ["ArrowLeft", "ArrowUp", "ArrowRight", "ArrowDown"];
+  const possibleKeys = ["ArrowLeft", "ArrowUp", "ArrowRight", "ArrowDown", " "];
+
+
 
   startButton.addEventListener("click", () => {
     game.start();
@@ -15,7 +18,7 @@ window.onload = function () {
 
   function handleKeyDown(event) {
     const key = event.key;
-
+    console.log(key)
     if (possibleKeys.includes(key)) {
       console.log(key);
       event.preventDefault();
@@ -43,6 +46,8 @@ window.onload = function () {
           console.log("GOW", game.gameScreen.offsetHeight);
           console.log("top", game.character.top);
           break;
+        case " ":
+        document.getElementById("game-end").style.backgroundImage = "url()"
       }
     }
   }
@@ -62,4 +67,16 @@ window.onload = function () {
         case "ArrowUp":
           game.character.directionY = 0;
           break;
-        cas
+        case "ArrowRight":
+          game.character.directionX = 0;
+          break;
+        case "ArrowDown":
+          game.character.directionY = 0;
+          break;
+      }
+    }
+  }
+
+  window.addEventListener("keydown", handleKeyDown);
+  window.addEventListener("keyup", handleKeyUp);
+};
