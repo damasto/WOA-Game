@@ -9,4 +9,8 @@ class Component {
   }
 
   updatePosition() {
-    this.
+    this.element.style.left = `${this.left}px`;
+    this.element.style.top = `${this.top}px`;
+  }
+  
+}

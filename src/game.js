@@ -56,13 +56,13 @@ class Game {
 
     //makes a wildfire appear every 10 seconds
     this.wildfireIntervalId = setInterval(() => {
-      this.wildfire = new Wildfire(
+      this.wildfire = new Wildfire (
         this.gameScreen,
         Math.floor(Math.random() * 800),
         Math.floor(Math.random() * (550 - 160 + 1) + 160),
         50,
         50,
-        "images/wildfire.png"
+        "../images/wildfire.png"
       );
 
       this.wildfire.removeBonus();
