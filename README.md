@@ -113,6 +113,6 @@ Add another game screen where to hit a button x-times will cause an explosion.
 # Links
 
 [Trello] (https://trello.com/invite/b/67be0732aec5d81c6569eabb/ATTI26b2e7442ae856844c203f5300d7e737240A39CD/walk-of-atonement)
-[Slides] ()
+[Slides] (https://docs.google.com/presentation/d/1KirJJx6jDbnbtDB6vTFldvawZvKBKKQk3TN8c57hMBA/edit?usp=sharing)
 [Github-repository] (https://github.com/damasto/WOA-Game)
 [Deployment] (https://damasto.github.io/WOA-Game/)
