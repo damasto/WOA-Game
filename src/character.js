@@ -44,15 +44,4 @@ class Character extends Component {
         const characterRect = this.element.getBoundingClientRect();
         const missileRect = missile.element.getBoundingClientRect();
 
-        if (
-            characterRect.left < missileRect.right && 
-            characterRect.right > missileRect.left && 
-            characterRect.top < missileRect.bottom && 
-            characterRect.bottom > missileRect.top
-        ) {
-            return true
-        } else {
-            return;
-        }
-    }
-}
+        if

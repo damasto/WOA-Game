@@ -61,7 +61,7 @@ class Game {
         Math.floor(Math.random() * (550 - 160 + 1) + 160),
         50,
         50,
-        "images/wildfire.png"
+        "./images/wildfire.png"
       );
 
       this.wildfire.removeBonus();
@@ -185,7 +185,7 @@ class Game {
         restartButton.innerHTML = "Play again"
         window.addEventListener("keydown", (event) => {
             if(event.key === " ") {
-                this.gameEndScreen.style.backgroundImage = "url(/images/septExpld.gif)";
+                this.gameEndScreen.style.backgroundImage = "url(../images/septExpld.gif)";
                 this.gameEndScreen.style.backgroundSize = "cover";
                 endScreenResult.innerHTML = "";
                 endPhrase.innerHTML = "";
