@@ -6,25 +6,4 @@ class Missile extends Component {
         this.element.setAttribute("src", imgPath);
         this.element.style.position = "absolute";
         this.element.style.width = `${this.width}px`;
-        this.element.style.height = `${this.height}px`;
-        this.element.style.left = `${this.left}px`;
-        this.element.style.top = `${this.top}px`;
-        this.rotate = "";
-
-        this.gameScreen.appendChild(this.element);
-  }
-
-  move() {
-    this.top += this.weight;
-    this.updatePosition();
-  }
-
-  toggleRotation() {
-    this.element.classList.add(this.rotate);
-  }
-
-  increaseWeight(incrementor) {
-    this.weight += incrementor
-  }
-    
-}
+        this.element.style.height = `${this.hei
