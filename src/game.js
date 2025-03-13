@@ -90,7 +90,7 @@ class Game {
       }
     }
 
-    if (this.catched === 1) {
+    if (this.catched === 5) {
       this.gameIsWon = true;
       this.endGame();
     }
