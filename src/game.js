@@ -62,7 +62,7 @@ class Game {
         Math.floor(Math.random() * (550 - 160 + 1) + 160),
         50,
         50,
-        "images/wildfire.png"
+        "/images/wildfire.png"
       );
 
       this.wildfire.removeBonus();
